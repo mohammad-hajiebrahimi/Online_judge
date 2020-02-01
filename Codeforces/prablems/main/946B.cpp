@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long                   ll;
+typedef long double                 ld;
+typedef pair<ll,ll>                 pll;
+typedef pair<ld,ld>                 pld;
+
+
+#define all(x)          (x).begin(),(x).end()
+#define Sort(x)         sort(all(x))
+#define sep             ' '
+
+#define endl            '\n'
+#define tab             '\t'
+#define X               first
+#define Y               second
+#define fast_io         ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define set_random      mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+const ll MOD = 1e9 + 7,
+         MAXN= 1e6+10,
+         INF=1e18;
+ll a,b;
+int main()
+{
+    fast_io;
+    cin>>a>>b;
+    while(a!=0 && b!=0){
+        ll f=1;
+        if(a>=2*b)a%=2*b,f=0;
+        else if (b>=2*a)b%=2*a,f=0;
+        if(f) break;
+    }
+    cout<<a<<sep<<b<<endl;
+    return 0;
+}
